@@ -1,7 +1,16 @@
 spring:
   cloud:
+    nacos:
+      discovery:
+        namespace: a32bdc9d-5028-4fd2-a55d-b3ed72e01bcb
+        server-addr: 10.60.46.11:8841,10.60.46.11:8842,10.60.46.11:8843
+        username: nacos
+        password: nacos
     config:
       discovery:
         enabled: true
+      label: master
+      profile: dev
+      uri: http://localhost:8002
   application:
     name: "SpringCloudClient"
